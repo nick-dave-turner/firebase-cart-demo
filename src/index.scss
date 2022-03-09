@@ -1,0 +1,51 @@
+@import-normalize;
+@import "./variables.scss";
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $dark-grey;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  background-color: $lite-grey;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $dark-grey;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  filter: brightness(0.85);
+}
+
+a:active {
+  filter: brightness(1.25);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+}

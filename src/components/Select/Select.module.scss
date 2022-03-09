@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+.label {
+  padding-right: 0.5rem;
+  font-weight: 600;
+}
+
+.select {
+  height: 2rem;
+  border: 1px solid $mid-grey;
+  padding: 0 5px;
+}

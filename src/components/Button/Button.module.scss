@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+
+.button {
+  background-color: $white;
+  border: 1px solid $mid-grey;
+  color: $dark-grey;
+  padding: 0.5rem;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $lite-grey;
+  }
+
+  &:active {
+    background-color: $mid-grey;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $mid-grey;
+  }
+}

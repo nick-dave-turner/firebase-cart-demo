@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: calc(#{$header-height} + #{$nav-height}) 1fr auto;
+  grid-template-areas: "#{$header-area}""#{$main-area}""#{$footer-area}";
+}
+
+.main {
+  grid-area: $main-area;
+  margin: 2rem 0;
+}
+
+.container {
+  display: grid;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  max-width: $container-width-lg;
+}

@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.skipLink {
+  position: absolute;
+  padding: 8px;
+  left: 50%;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  background: $dark-grey;
+  color: $white;
+  z-index: 1000;
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}
