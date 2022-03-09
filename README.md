@@ -1,5 +1,21 @@
-# React / Firebase Auth / Firebase Firestore demo
+# React Firebase/Firestore demo
 
+## Demo: [firebase-cart-demo](https://firebase-cart-demo.herokuapp.com)
+
+- Home Page: Displays a list of products that can be added to the cart.
+  Accessible via the "shop" logo in header/footer. [View Home Page](https://firebase-cart-demo.herokuapp.com/)
+- Cart Page: Manages a users cart and displays running totals. Allows user to remove items.
+  Accessible via the "cart" icon in header. [ViewCart Page](https://firebase-cart-demo.herokuapp.com/cart)
+
+### Key Highlights
+
+- Firebase/Auth is used to generate a unique user id that will persist across sessions
+- Firebase/Firestore DB is used to store products and unique user carts
+- React-Query-Firebase is used to fetch and update items in Firestore
+- Bespoke Hooks/Context created to manage user/cart states
+- Fully responsive with CSS Modules
+- Suite of React Components
+- Fully unit tested
 
 # Getting Started with Create React App
 
