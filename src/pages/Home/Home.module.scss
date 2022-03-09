@@ -11,6 +11,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 2rem;
+
+  @media screen and (max-width: $container-width-sm) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 .form {

@@ -15,7 +15,7 @@ export const CartCard = ({
     <img src={data.image} alt="" />
     <div className={styles.content}>
       <h2>{data?.title}</h2>
-      <h3>
+      <h3 className={styles.price}>
         £{data.price} / Qty {count}
       </h3>
       <Button

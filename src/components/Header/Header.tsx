@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { ReactComponent as Logo } from "./cart-icon.svg";
 
 import { useCartTotalContext } from "../../hooks";
 import styles from "./Header.module.scss";
@@ -17,7 +17,7 @@ export const Header = () => {
           <li>
             <Link to="/cart" data-testid="cart-link">
               <span className={styles.count}>{cartTotal}</span>
-              <ShoppingBasketIcon titleAccess="View the shopping cart" />
+              <Logo />
             </Link>
           </li>
         </ul>
