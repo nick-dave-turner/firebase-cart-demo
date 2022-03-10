@@ -12,14 +12,17 @@ export const CartCard = ({
   removeFromCart: (id: string, value: number) => void;
 }) => (
   <article className={styles.grid}>
-    <img src={data.image} alt="" />
+    <div
+      className={styles.image}
+      style={{ backgroundImage: `url(${data.image})` }}
+    />
     <div className={styles.content}>
-      <h2>{data?.title}</h2>
+      <h2>{data.title}</h2>
       <h3 className={styles.price}>
         £{data.price} / Qty {count}
       </h3>
       <Button
-        onClick={() => removeFromCart(data?.id, data?.price)}
+        onClick={() => removeFromCart(data.id, data.price)}
         dataTestId="card-btn"
       >
         Remove

@@ -9,7 +9,7 @@
   box-shadow: 0 20px 40px -14px rgba($black, 0.25);
 
   &:hover .image {
-    filter: contrast(100%);
+    filter: contrast(70%);
   }
 }
 
@@ -48,7 +48,6 @@
   background-size: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  filter: contrast(70%);
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
 
   &::before {
