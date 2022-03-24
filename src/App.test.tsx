@@ -12,7 +12,7 @@ jest.mock("firebase/auth", () => ({
 const mockSignInAnonymously = signInAnonymously as jest.Mock;
 
 beforeEach(() => {
-  mockSignInAnonymously.mockResolvedValue({ user: { uid: "abcd1234" } });
+  mockSignInAnonymously.mockResolvedValue({ user: { uid: "user-1234" } });
 });
 
 test("should render without crashing", async () => {

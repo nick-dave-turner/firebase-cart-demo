@@ -3,7 +3,11 @@ import userEvent from "@testing-library/user-event";
 import { axe } from "jest-axe";
 
 import { useFBGetCart, useFBGetProduct } from "../../firebase";
-import { MOCK_PRODUCT, MOCK_CART_EMPTY, MOCK_CART } from "../../mocks";
+import {
+  MOCK_PRODUCT,
+  MOCK_CART_EMPTY,
+  MOCK_CART_SINGLE_PRODUCT,
+} from "../../mocks";
 import { Cart } from "./Cart";
 
 jest.mock("firebase/auth", () => ({
@@ -80,7 +84,7 @@ describe("when in error", () => {
     describe("when no items present", () => {
       beforeEach(() => {
         mockUseFBGetCarts.mockReturnValue({
-          data: [MOCK_CART_EMPTY],
+          data: MOCK_CART_EMPTY,
           isLoading: false,
           isError: false,
         });
@@ -97,7 +101,7 @@ describe("when in error", () => {
     describe("when items present", () => {
       beforeEach(() => {
         mockUseFBGetCarts.mockReturnValue({
-          data: [MOCK_CART],
+          data: MOCK_CART_SINGLE_PRODUCT,
           isLoading: false,
           isError: false,
         });

@@ -10,7 +10,6 @@ import { useAuthContext, useFBGetCart } from "../firebase";
 
 const CartTotalContext = createContext({
   cartTotal: 0,
-  updateCartTotal: (_: Cart) => {},
 });
 
 export const CartTotalProvider: FC = ({ children }) => {
@@ -20,8 +19,8 @@ export const CartTotalProvider: FC = ({ children }) => {
 
   const updateCartTotal = useCallback((cart: Cart) => {
     setCartTotal(
-      cart?.products.length
-        ? (cart?.products || [])
+      cart?.products?.length
+        ? cart.products
             .map(item => item.count)
             .reduce((prev, next) => prev + next)
         : 0
@@ -35,7 +34,7 @@ export const CartTotalProvider: FC = ({ children }) => {
   }, [fbCart, setCartTotal, updateCartTotal]);
 
   return (
-    <CartTotalContext.Provider value={{ cartTotal, updateCartTotal }}>
+    <CartTotalContext.Provider value={{ cartTotal }}>
       {children}
     </CartTotalContext.Provider>
   );

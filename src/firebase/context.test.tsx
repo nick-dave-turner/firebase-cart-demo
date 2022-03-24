@@ -24,7 +24,7 @@ const MockComponent = () => {
   return <h1 data-testid="content">{userId}</h1>;
 };
 
-const mockUid = "abcd1234";
+const mockUid = "user-1234";
 
 describe("when userId is successfully returned", () => {
   beforeEach(() => {

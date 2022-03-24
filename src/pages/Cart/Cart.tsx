@@ -89,6 +89,7 @@ export const CartItem = ({
 
   useEffect(() => {
     if (isFetched) incrementTotal((data?.price || 0) * count);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFetched]);
 
   if (!data) return <></>;
